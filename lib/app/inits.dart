@@ -7,5 +7,7 @@ Future<void> inits() async {
 
   Serv.sample.init();
 
+  Serv.product.init();
   logx.wtf('inits success');
+  Serv.auth.init();
 }
