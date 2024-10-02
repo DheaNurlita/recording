@@ -13,6 +13,8 @@ class ProductServ {
     logzz.i(ProductServ, 'rxCounter setState success');
   }
 
+  //*-------------------------------------------------------------------------
+
   initProduct() async {
     _pv.rxProductLoader.stateAsync = readProduct();
   }
@@ -23,5 +25,11 @@ class ProductServ {
 
   addToList(List<Models> moreProduct) async {
     _pv.rxProductList.st = [..._pv.rxProductList.st, ...moreProduct];
+  }
+
+  //*-------------------------------------------------------------------------
+
+  createOne(Models data) async {
+    await _rp.createProduct(data);
   }
 }

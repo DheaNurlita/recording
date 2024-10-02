@@ -26,7 +26,8 @@ class ProductListView extends StatelessWidget {
                   _dt.rxProductList.st.length,
                   (index) {
                     return ListTile(
-                      title: Text(_dt.rxProductList.st[index].id),
+                      title: Text(_dt.rxProductList.st[index].name),
+                      subtitle: Text(_dt.rxProductList.st[index].id),
                     );
                   },
                 )

@@ -17,4 +17,8 @@ class ProductRepo {
 
     return products;
   }
+
+  Future createProduct(Models data) async {
+    await x1fbFirestore.st.create(_pv.collProduct, data.id, data.toMap());
+  }
 }

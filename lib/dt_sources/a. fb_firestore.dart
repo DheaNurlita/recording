@@ -11,4 +11,8 @@ class FbFirestore {
 
     return result;
   }
+
+  Future<void> create(String collProduct, String docId, Map<String, dynamic> data) async {
+    await FirebaseFirestore.instance.collection(collProduct).doc(docId).set(data);
+  }
 }
