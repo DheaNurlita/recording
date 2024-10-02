@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:recording/firebase_options.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import '../dt_domains/_index.dart';
