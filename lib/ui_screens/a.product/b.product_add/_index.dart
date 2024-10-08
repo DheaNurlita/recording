@@ -20,6 +20,11 @@ part 'widgets/b.product_add.fab.dart';
 part 'widgets/c.product_add.charlie.dart';
 part 'widgets/d.product_add.delta.dart';
 part 'widgets/e.product_add.echo.dart';
+part 'widgets/g.product_add.name.dart';
+part 'widgets/f.product_add.desc.dart';
+part 'widgets/i.product_add.quantity.dart';
+part 'widgets/j.product_add.submit.dart';
+part 'widgets/h.product_add.price.dart';
 
 ProductAddData get _dt => Data.productAdd.st;
 ProductAddCtrl get _ct => Ctrl.productAdd;

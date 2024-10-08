@@ -11,10 +11,10 @@ class ProductAddCtrl {
     final id = const Uuid().v1();
     final data = Models(
       id: id,
-      price: Random().nextInt(100),
-      quantity: Random().nextInt(100),
-      description: generateWordPairs().take(8).join(' '),
-      name: generateWordPairs().take(1).join(' '),
+      price: int.parse(_dt.rxPrice.value),
+      quantity: int.parse(_dt.rxQuantity.value),
+      description: _dt.rxDsesc.value,
+      name: _dt.rxName.value,
       createdAt: DateTime.now().toString(),
       imageUrl: '',
     );
@@ -24,5 +24,9 @@ class ProductAddCtrl {
 
     _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, data);
     nav.back();
+  }
+
+  submit() {
+    _dt.rxForm.submit();
   }
 }
