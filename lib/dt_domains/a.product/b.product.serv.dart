@@ -32,4 +32,16 @@ class ProductServ {
   createOne(Models data) async {
     await _rp.createProduct(data);
   }
+
+  //*------------------------------------------------------------------------
+  initProductDetail() {
+    _pv.rxProductDetail.stateAsync = _rp.readDocument(_pv.rxSelectedId.st);
+  }
+
+  chooseSelectedId(String id) async {
+    // _pv.rxSelectedId.refresh();
+    await _pv.rxSelectedId.setState(
+      (s) => id,
+    );
+  }
 }

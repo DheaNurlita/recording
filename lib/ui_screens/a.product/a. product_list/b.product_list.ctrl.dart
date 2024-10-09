@@ -15,4 +15,11 @@ class ProductListCtrl {
     }
     return result;
   }
+
+  selectedId(String id) async {
+    Serv.product.chooseSelectedId(id);
+    logx.i(_dt.rxSelectedId.st);
+
+    nav.to(Routes.productDetail);
+  }
 }

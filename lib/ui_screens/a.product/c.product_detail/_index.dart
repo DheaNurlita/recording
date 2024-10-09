@@ -16,5 +16,5 @@ part 'widgets/d.product_detail.delta.dart';
 part 'widgets/e.product_detail.echo.dart';
 
 ProductDetailData get _dt => Data.productDetail.st;
+// ignore: unused_element
 ProductDetailCtrl get _ct => Ctrl.productDetail;
-

@@ -17,7 +17,7 @@ class AddDescription extends StatelessWidget {
             onEditingComplete: () => _dt.rxPrice.focusNode.requestFocus(),
             keyboardType: TextInputType.name,
             decoration: InputDecoration(
-              label: Text('Masukan deskripsi'),
+              label: const Text('Masukan deskripsi'),
               hintText: 'deskripsi',
               errorText: _dt.rxDsesc.error,
               isDense: true,

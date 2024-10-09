@@ -26,4 +26,12 @@ class ProductProv {
           }
         },
       ));
+  final rxSelectedId = RM.inject(
+    () => '',
+  );
+
+  final rxProductDetail = RM.injectFuture<Models?>(() => Future.value(null),
+      sideEffects: SideEffects(
+        initState: () => _sv.initProductDetail(),
+      ));
 }

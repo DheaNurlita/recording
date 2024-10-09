@@ -17,7 +17,7 @@ class AddName extends StatelessWidget {
             onEditingComplete: () => _dt.rxDsesc.focusNode.requestFocus(),
             keyboardType: TextInputType.name,
             decoration: InputDecoration(
-              label: Text('Masukan Nama'),
+              label: const Text('Masukan Nama'),
               hintText: 'Nama',
               errorText: _dt.rxName.error,
               isDense: true,

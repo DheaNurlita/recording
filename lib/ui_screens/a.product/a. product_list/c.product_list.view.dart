@@ -25,9 +25,19 @@ class ProductListView extends StatelessWidget {
                 ...List.generate(
                   _dt.rxProductList.st.length,
                   (index) {
-                    return ListTile(
-                      title: Text(_dt.rxProductList.st[index].name),
-                      subtitle: Text(_dt.rxProductList.st[index].id),
+                    return OnReactive(
+                      () => Card(
+                        color: Colors.blueGrey.shade700,
+                        child: ListTile(
+                          onTap: () async {
+                            _ct.selectedId(_dt.rxProductList.st[index].id);
+                          },
+                          selected: _dt.rxSelectedId.st == _dt.rxProductList.st[index].id,
+                          selectedColor: Colors.amber,
+                          title: Text(_dt.rxProductList.st[index].name),
+                          subtitle: Text(_dt.rxProductList.st[index].id),
+                        ),
+                      ),
                     );
                   },
                 )

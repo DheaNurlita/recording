@@ -17,4 +17,9 @@ class ProductRepoMock implements ProductRepo {
   Future createProduct(Models data) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<Models> readDocument(String docId) {
+    throw UnimplementedError();
+  }
 }
